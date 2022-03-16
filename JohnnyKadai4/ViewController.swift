@@ -12,7 +12,7 @@ final class ViewController: UIViewController {
 
     @IBOutlet private weak var countLabel: UILabel!
 
-    @IBAction private func countup(_ sender: Any) {
+    @IBAction private func countUp(_ sender: Any) {
         count.count += 1
         countLabel.text = count.count.description
     }
