@@ -8,17 +8,18 @@
 import UIKit
 
 final class ViewController: UIViewController {
+    private var count = Count.init(count: 0)
+
     @IBOutlet private weak var countLabel: UILabel!
 
     @IBAction private func countup(_ sender: Any) {
+        count.count += 1
+        countLabel.text = count.count.description
     }
 
     @IBAction private func clearCount(_ sender: Any) {
-    }
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        count.count = 0
+        countLabel.text = count.count.description
     }
 }
 
