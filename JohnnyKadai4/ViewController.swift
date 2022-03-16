@@ -22,4 +22,3 @@ final class ViewController: UIViewController {
         countLabel.text = count.count.description
     }
 }
-

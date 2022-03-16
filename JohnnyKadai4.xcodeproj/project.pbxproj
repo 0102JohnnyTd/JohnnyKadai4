@@ -60,14 +60,22 @@
 			children = (
 				1C86224927E1EDEC00FF2C6A /* AppDelegate.swift */,
 				1C86224B27E1EDEC00FF2C6A /* SceneDelegate.swift */,
+				1C86226327E24B9900FF2C6A /* Model */,
 				1C86224D27E1EDEC00FF2C6A /* ViewController.swift */,
-				1C86225D27E2028E00FF2C6A /* Count.swift */,
 				1C86224F27E1EDEC00FF2C6A /* Main.storyboard */,
 				1C86225227E1EDF000FF2C6A /* Assets.xcassets */,
 				1C86225427E1EDF000FF2C6A /* LaunchScreen.storyboard */,
 				1C86225727E1EDF000FF2C6A /* Info.plist */,
 			);
 			path = JohnnyKadai4;
+			sourceTree = "<group>";
+		};
+		1C86226327E24B9900FF2C6A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1C86225D27E2028E00FF2C6A /* Count.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -80,6 +88,7 @@
 				1C86224227E1EDEC00FF2C6A /* Sources */,
 				1C86224327E1EDEC00FF2C6A /* Frameworks */,
 				1C86224427E1EDEC00FF2C6A /* Resources */,
+				1C86226427E24BEC00FF2C6A /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -135,6 +144,26 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1C86226427E24BEC00FF2C6A /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "export PATH=\"$PATH:/opt/homebrew/bin\"\n\nif which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		1C86224227E1EDEC00FF2C6A /* Sources */ = {
